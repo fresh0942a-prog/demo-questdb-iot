@@ -1,0 +1,16 @@
+apiVersion: 1
+datasources:
+  - name: QuestDB
+    uid: questdb-pg
+    type: postgres
+    access: proxy
+    url: questdb:8812
+    user: admin
+    isDefault: true
+    jsonData:
+      database: qdb
+      sslmode: disable
+      postgresVersion: 1400
+      timescaledb: false
+    secureJsonData:
+      password: quest
